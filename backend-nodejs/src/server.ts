@@ -26,7 +26,7 @@ const io = new Server(server, {
     allowedHeaders: ["Content-Type", "Authorization"], // Restrict headers
     credentials: true, // Enable credentials for secure connections
   },
-  transports: ["websocket"], // Use WebSockets for better performance
+  transports: ["websocket", "polling"], // Use WebSockets for better performance
   pingInterval: 25000, // Ping clients every 25 seconds to ensure connection
   pingTimeout: 60000, // Disconnect clients if they don't respond in 60 seconds
   maxHttpBufferSize: 1e8, // Set max buffer size for HTTP requests (100 MB)
